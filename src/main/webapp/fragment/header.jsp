@@ -47,22 +47,22 @@
 
         <%--        <!-- Nav Item - Dashboard -->    PANEL BOCZNY--%>
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="${pageContext.request.contextPath}/about">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>KSW</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="/event/list">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>Events</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="/fighter/list">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>Fighters</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="https://kswshop.com/pl/">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>KSW Shop</span></a>
         </li>
@@ -109,19 +109,13 @@
                     <li class="nav-item dropdown no-arrow mx-1">
 
                         <div class="my-2"></div>
-                        <a href="#" class="btn btn-info btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-info-circle"></i>
-                                        </span>
+                        <a href="${pageContext.request.contextPath}/contact" class="btn btn-info btn-icon-split">
                             <span class="text">Contact</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown no-arrow mx-1">
                         <div class="my-2"></div>
-                        <a href="#" class="btn btn-info btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-info-circle"></i>
-                                        </span>
+                        <a href="${pageContext.request.contextPath}/api" class="btn btn-info btn-icon-split">
                             <span class="text">Free Api</span>
                         </a>
                     </li>
@@ -135,7 +129,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">USER NAME IF LOGGED</span>
                             <img class="img-profile rounded-circle"
-                                 src="${pageContext.request.contextPath}/resources/img/userlogo.png">
+                                 src="${pageContext.request.contextPath}/resources/img/userlogo.png" alt="">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
