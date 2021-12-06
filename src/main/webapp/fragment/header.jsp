@@ -47,7 +47,7 @@
 
         <%--        <!-- Nav Item - Dashboard -->    PANEL BOCZNY--%>
         <li class="nav-item active">
-            <a class="nav-link" href="${pageContext.request.contextPath}/about">
+            <a class="nav-link" href="/about">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>KSW</span></a>
         </li>
@@ -67,7 +67,7 @@
                 <span>KSW Shop</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="/user/panel">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>My Profile</span></a>
         </li>
@@ -136,7 +136,7 @@
                              aria-labelledby="userDropdown">
                             <%--   LOGOWANIE REJESTRACJA                         --%>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item"  href="#" >
+                            <a class="dropdown-item"  href="/login" >
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Sign in
                             </a>
@@ -146,7 +146,7 @@
                                 Register
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/logout">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
