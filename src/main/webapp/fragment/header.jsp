@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: adam
@@ -146,10 +147,17 @@
                                 Register
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/logout">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                                <sec:authorize access="isAuthenticated()">
+                                    <form action="<c:url value="/logout"/>" method="post" class="dropdown-item">
+                                        <input type="submit" value="Logout" class="dropdown-item">
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                    </form>
+                                </sec:authorize>
+
                         </div>
                     </li>
 
