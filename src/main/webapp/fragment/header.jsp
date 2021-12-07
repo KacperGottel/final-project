@@ -39,7 +39,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="${pageContext.request.contextPath}/">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center"
+           href="${pageContext.request.contextPath}/">
             <div class="sidebar-brand-text mx-3">KSW STATS</div>
         </a>
 
@@ -128,7 +129,13 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">USER NAME IF LOGGED</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                <sec:authorize access="isAuthenticated()">
+                                    <sec:authentication property="authorities[0]"/>
+                                    <br>
+                                    <sec:authentication property="principal.username"/>
+                                </sec:authorize>
+                            </span>
                             <img class="img-profile rounded-circle"
                                  src="${pageContext.request.contextPath}/resources/img/userlogo.png" alt="">
                         </a>
@@ -137,26 +144,23 @@
                              aria-labelledby="userDropdown">
                             <%--   LOGOWANIE REJESTRACJA                         --%>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item"  href="/login" >
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item" href="/login">
+                                <i class="fas fa-sign-in-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Sign in
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <a class="dropdown-item" href="/register">
+                                <i class="fas fa-registered fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Register
                             </a>
                             <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                                <sec:authorize access="isAuthenticated()">
-                                    <form action="<c:url value="/logout"/>" method="post" class="dropdown-item">
-                                        <input type="submit" value="Logout" class="dropdown-item">
-                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                                    </form>
-                                </sec:authorize>
+                            <sec:authorize access="isAuthenticated()">
+                                <form action="<c:url value="/logout"/>" method="post" class="dropdown-item">
+
+                                    <input type="submit" value="Logout" class="dropdown-item">
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                </form>
+                            </sec:authorize>
 
                         </div>
                     </li>
