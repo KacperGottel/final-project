@@ -56,7 +56,7 @@ public class UserController {
 
         if (repeatpassword.equals(user.getPassword())) {
             userService.saveUser(user);
-            return "redirect:user/login";
+            return "redirect:/login";
         } else {
             model.addAttribute("error", "Fail");
             return "/user/register";
