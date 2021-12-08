@@ -12,4 +12,9 @@ public class LoginController {
     public String login() {
         return "user/login";
     }
+    @RequestMapping(value = {"user/login"}, method = RequestMethod.GET)
+    public String loginPost() {
+        return "home/home";
+    }
+
 }
