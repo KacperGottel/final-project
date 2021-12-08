@@ -12,9 +12,19 @@ public class LoginController {
     public String login() {
         return "user/login";
     }
+//    @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
+//    public String loginPost() {
+//        return "/user/panel";
+//    }
+
     @RequestMapping(value = {"user/login"}, method = RequestMethod.GET)
-    public String loginPost() {
-        return "home/home";
+    public String register() {
+        return "user/login";
     }
+
+//    @RequestMapping(value = {"user/login"}, method = RequestMethod.POST)
+//    public String registerPost() {
+//        return "redirect:/login";
+//    }
 
 }

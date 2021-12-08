@@ -33,7 +33,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsernameEnabled(username);
     }
 
-
     @Override
     public void saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -42,5 +41,6 @@ public class UserServiceImpl implements UserService {
         user.setRole(userRole);
         userRepository.save(user);
     }
+
 
 }
