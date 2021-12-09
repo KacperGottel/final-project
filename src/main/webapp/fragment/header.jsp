@@ -73,6 +73,11 @@
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
                 <span>My Profile</span></a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/admin/panel">
+                <i class="fas fa-fw fa-chevron-circle-right"></i>
+                <span>Page administration</span></a>
+        </li>
 
 
         <!-- Divider -->
