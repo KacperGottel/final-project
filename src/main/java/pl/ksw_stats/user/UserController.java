@@ -6,10 +6,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import pl.ksw_stats.comment.CommentRepository;
 import pl.ksw_stats.fighter.Fighter;
 import pl.ksw_stats.fighter.FighterRepository;
@@ -17,7 +15,12 @@ import pl.ksw_stats.role.RoleRepository;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.List;
+import java.awt.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import java.util.Set;
 
 @Controller
@@ -31,6 +34,7 @@ public class UserController {
     private final FighterRepository fighterRepository;
 
 
+
     public UserController(UserService userService, UserRepository userRepository, RoleRepository roleRepository, CommentRepository commentRepository, FighterRepository fighterRepository) {
         this.userService = userService;
         this.userRepository = userRepository;
@@ -40,6 +44,7 @@ public class UserController {
         this.fighterRepository = fighterRepository;
     }
 
+    public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/webapp/resources/img/uploads" ;
 
     @GetMapping("/register")
     public String registerForm(Model model) {
@@ -63,7 +68,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping ("/user/panel")
+    @RequestMapping("/user/panel")
     public String userPanel(Model model) {
 
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -76,7 +81,7 @@ public class UserController {
             username = principal.toString();
         }
 
-        if(username.equals("anonymousUser")){
+        if (username.equals("anonymousUser")) {
             return "redirect:/login";
         }
 
@@ -111,10 +116,11 @@ public class UserController {
         userRepository.deleteById(userId);
         return "home/home";
     }
+
     @RequestMapping("/user/{userId}/favouritefighters/list")
-    public String addFavouriteFighterfromList(@PathVariable long userId,Model model) {
-        model.addAttribute("user",userRepository.getById(userId));
-        model.addAttribute("fighters",fighterRepository.findAll());
+    public String addFavouriteFighterfromList(@PathVariable long userId, Model model) {
+        model.addAttribute("user", userRepository.getById(userId));
+        model.addAttribute("fighters", fighterRepository.findAll());
         return "user/allfighters";
     }
 
@@ -131,18 +137,39 @@ public class UserController {
 
     @RequestMapping("/user/{userId}/update")
     public String userUpdateForm(@PathVariable long userId, Model model) {
-        model.addAttribute("user",userRepository.getById(userId));
+        model.addAttribute("user", userRepository.getById(userId));
         return "user/update";
     }
 
     @PostMapping("/user/{userId}/update")
-    public String userUpdatePost(@Valid User user, BindingResult bindingResult,@PathVariable long userId, Model model) {
-        if(bindingResult.hasErrors()){
-            model.addAttribute("user",userRepository.getById(userId));
+    public String userUpdatePost(@Valid User user, BindingResult bindingResult, @PathVariable long userId, Model model) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("user", userRepository.getById(userId));
             return "user/update";
         }
         userService.saveUser(user);
         return "/user/panel";
     }
+
+    //    UPLOAD
+    @RequestMapping("/user/{userId}/upload")
+    public String userUploadIMGForm(@PathVariable long userId, Model model) {
+        model.addAttribute("user", userRepository.getById(userId));
+        return "user/upload";
+    }
+    @PostMapping("/user/{userId}/upload")
+    public String userUploadIMGProcess(@PathVariable long userId, Model model, @RequestParam("file") MultipartFile file) {
+        Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
+        try {
+            Files.write(fileNameAndPath, file.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        User user = userRepository.getById(userId);
+        user.setImg("/resources/img/uploads/" + file.getOriginalFilename());
+        userRepository.save(user);
+        return "redirect:/user/panel";
+    }
+
 
 }
