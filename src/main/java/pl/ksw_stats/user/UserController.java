@@ -21,6 +21,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import java.util.Iterator;
 import java.util.Set;
 
 @Controller
@@ -34,7 +35,6 @@ public class UserController {
     private final FighterRepository fighterRepository;
 
 
-
     public UserController(UserService userService, UserRepository userRepository, RoleRepository roleRepository, CommentRepository commentRepository, FighterRepository fighterRepository) {
         this.userService = userService;
         this.userRepository = userRepository;
@@ -44,7 +44,7 @@ public class UserController {
         this.fighterRepository = fighterRepository;
     }
 
-    public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/webapp/resources/img/uploads" ;
+    public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/webapp/resources/img/uploads";
 
     @GetMapping("/register")
     public String registerForm(Model model) {
@@ -95,11 +95,16 @@ public class UserController {
     public String favouriteFighterDelete(@PathVariable long userid, @PathVariable long fighterid) {
         User user = userRepository.getById(userid);
         Set<Fighter> favouriteFighters = user.getFavouriteFighters();
-        favouriteFighters.forEach(f -> {
-            if (f.getId().equals(fighterid)) {
-                favouriteFighters.remove(f);
+        Iterator<Fighter> iterator = favouriteFighters.iterator();
+
+        while (iterator.hasNext()) {
+            Fighter nextfghtr = iterator.next();
+            if (nextfghtr.getId() == fighterid) {
+                favouriteFighters.remove(nextfghtr);
+                break;
             }
-        });
+        }
+
         user.setFavouriteFighters(favouriteFighters);
         userRepository.save(user);
         return "redirect:/user/panel";
@@ -157,16 +162,17 @@ public class UserController {
         model.addAttribute("user", userRepository.getById(userId));
         return "user/upload";
     }
+
     @PostMapping("/user/{userId}/upload")
     public String userUploadIMGProcess(@PathVariable long userId, Model model, @RequestParam("file") MultipartFile file) {
-        Path fileNameAndPath = Paths.get(uploadDirectory, file.getOriginalFilename());
+        Path fileNameAndPath = Paths.get(uploadDirectory, "usr" + userId + file.getOriginalFilename());
         try {
             Files.write(fileNameAndPath, file.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
         User user = userRepository.getById(userId);
-        user.setImg("/resources/img/uploads/" + file.getOriginalFilename());
+        user.setImg("/resources/img/uploads/" + "usr" + userId + file.getOriginalFilename());
         userRepository.save(user);
         return "redirect:/user/panel";
     }

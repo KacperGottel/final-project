@@ -76,7 +76,7 @@
         <li class="nav-item active">
             <a class="nav-link" href="/admin/panel">
                 <i class="fas fa-fw fa-chevron-circle-right"></i>
-                <span>Page administration</span></a>
+                <span>Administration</span></a>
         </li>
 
 
@@ -123,7 +123,7 @@
                     <li class="nav-item dropdown no-arrow mx-1">
                         <div class="my-2"></div>
                         <a href="${pageContext.request.contextPath}/api" class="btn btn-info btn-icon-split">
-                            <span class="text">Free Api</span>
+                            <span class="text">Api</span>
                         </a>
                     </li>
 
