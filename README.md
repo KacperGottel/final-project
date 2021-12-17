@@ -1,9 +1,4 @@
-![Screenshot from 2021-12-17 12-47-57](https://user-images.githubusercontent.com/90089220/146547884-de63574c-ba3f-48b3-889b-3690e8e461d1.png)
-![Screenshot from 2021-12-17 12-48-17](https://user-images.githubusercontent.com/90089220/146547889-20cabc8f-ec1a-433e-bf0e-19ba42cb3932.png)
-![Screenshot from 2021-12-17 12-46-54](https://user-images.githubusercontent.com/90089220/146547901-6da6d762-b401-4aaa-a97b-550d4b4ecde2.png)
-![Screenshot from 2021-12-17 12-48-22](https://user-images.githubusercontent.com/90089220/146547905-16ce761a-a0ee-455b-bbba-bccfbc460a0b.png)
-![Screenshot from 2021-12-17 12-48-02](https://user-images.githubusercontent.com/90089220/146547910-b4715069-a86f-453f-83e6-2432b51f9355.png)
-![Screenshot from 2021-12-17 12-46-48](https://user-images.githubusercontent.com/90089220/146547913-e2e04158-cc9d-4551-9330-6181daa15563.png)
+
 ksw-stats
 
 My graduation project for Java: Web Developer course by CodersLab Online.
@@ -34,18 +29,24 @@ Contact
 Please add suggestions or contact me if you like my project.
 
 Views:
+Access: everyone
 
-![Screenshot from 2021-12-17 12-46-34](https://user-images.githubusercontent.com/90089220/146547923-88f6f400-5bbc-4e93-bd5e-17dcad7e4b44.png)
-![Screenshot from 2021-12-17 12-46-27](https://user-images.githubusercontent.com/90089220/146547933-7ecb6348-455b-4763-868b-ab7e3b889d26.png)
-![Screenshot from 2021-12-17 12-46-19](https://user-images.githubusercontent.com/90089220/146547936-ca1cca77-93f0-4b03-9721-21c5805e780e.png)
-![Screenshot from 2021-12-17 12-47-23](https://user-images.githubusercontent.com/90089220/146547940-961262f9-d09d-4adf-9597-d30f32bb342c.png)
-![Screenshot from 2021-12-17 12-47-03](https://user-images.githubusercontent.com/90089220/146547946-31d8b5de-1dea-46f2-b7a3-28929775cac3.png)
-![Screenshot from 2021-12-17 12-47-52](https://user-images.githubusercontent.com/90089220/146547948-fff2e3db-b3ed-4c7e-ad03-a48d8e392505.png)
+![Screenshot from 2021-12-17 12-45-49](https://user-images.githubusercontent.com/90089220/146548319-d5b7de06-cf25-42e9-9df9-577e3d6f1cd9.png)
+![Screenshot from 2021-12-17 12-46-14](https://user-images.githubusercontent.com/90089220/146548324-66ba16ed-02c1-4c3c-96e6-9c7a91bb8e5a.png)
+![Screenshot from 2021-12-17 12-46-19](https://user-images.githubusercontent.com/90089220/146548328-1ae95e1c-ebf8-4a67-b556-615b1f8cac97.png)
+![Screenshot from 2021-12-17 12-46-27](https://user-images.githubusercontent.com/90089220/146548331-02c0f0f1-d024-40c5-88c4-fa709793e82d.png)
+![Screenshot from 2021-12-17 12-46-34](https://user-images.githubusercontent.com/90089220/146548335-1146b01d-a86c-4a0e-b0b2-5b0c717f98bb.png)
+![Screenshot from 2021-12-17 12-46-48](https://user-images.githubusercontent.com/90089220/146548346-35e05894-94ef-4a91-8257-36a9e9d220f5.png)
+![Screenshot from 2021-12-17 12-46-54](https://user-images.githubusercontent.com/90089220/146548347-ace67aed-1161-4ca0-8f9f-5074ca911458.png)
+![Screenshot from 2021-12-17 12-48-17](https://user-images.githubusercontent.com/90089220/146548568-31671e4c-0a4b-4d7b-9b1f-fe0c34abd7f5.png)
+![Screenshot from 2021-12-17 12-48-22](https://user-images.githubusercontent.com/90089220/146548571-5491ee06-e9f5-4b98-8ebc-416f186b53c6.png)
 
+Access: users
 
+![Screenshot from 2021-12-17 12-47-23](https://user-images.githubusercontent.com/90089220/146548654-3f687cab-5f9b-4558-bd5c-7fd294716172.png)
+![Screenshot from 2021-12-17 12-47-52](https://user-images.githubusercontent.com/90089220/146548662-9a9c90ce-4207-4013-ac60-ad462b8d5b69.png)
+![Screenshot from 2021-12-17 12-47-57](https://user-images.githubusercontent.com/90089220/146548665-bfa1f178-330c-44c0-acb2-3abc7be39b10.png)
+![Screenshot from 2021-12-17 12-48-02](https://user-images.githubusercontent.com/90089220/146548667-5893cd42-f074-4f5f-8b50-5f4a8e6f0a84.png)
 
-![Screenshot from 2021-12-17 12-47-13](https://user-images.githubusercontent.com/90089220/146547951-583ba4e3-4f47-40c9-a01d-b3b7e22de30f.png)
-![Screenshot from 2021-12-17 12-45-49](https://user-images.githubusercontent.com/90089220/146547952-62a8302b-4d00-44d7-aa12-2ba2e41e410d.png)
-![Screenshot from 2021-12-17 12-46-14](https://user-images.githubusercontent.com/90089220/146547964-6b8f585d-cc7f-489f-8064-5304eec0d235.png)
 
 
