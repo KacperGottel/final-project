@@ -1,34 +1,36 @@
 
-ksw-stats
+**ksw-stats**<br>
+
 
 My graduation project for Java: Web Developer course by CodersLab Online.
-
 Application with great potential to develop. It's about KSW (European/Poland greatest mma organisation). The project was born out of desire to have a webapp that collects events, fightcards, fighters with their personals. Whats more, user have an opportunity to menage his account, favourite fighters list, own comments and its likes. 
 
 Application connect to Polsat Sport rss about combat sports and show news to everyone. Also everyone can read about events, fights, contact etc. or use free api endpoints that appears on webside. 
 
-Installation
+
+
+**Installation**<br>
 ksw-stats is written with Spring Boot. To run:
 
 compile it with maven and execute jar file
 add your username and password for database in application.properties
 
-Technologies
-Java EE
-Spring Boot
-Polsat Sport rss
-Spring DataJpa, SpringSecurity
-JSP views
-Hibernate
-MySql 
 
-Usage
+**Technologies**<br>
+Java EE<br>
+Spring Boot<br>
+Polsat Sport rss<br>
+Spring DataJpa, SpringSecurity<br>
+JSP views<br>
+Hibernate<br>
+MySql<br>
+
+**Usage**<br>
 Register and Sign in. Get a view of rss news, events, fights, fighters and comments. Get to user panel, change your personals and picture. Add fighters to favourities. If your role is admin, you can block/unblock user, change their roles, add and upload events, fights, fighters and categories.
 
-Contact
-Please add suggestions or contact me if you like my project.
 
-Views:
+
+**Views:**<br>
 Access: everyone
 
 ![Screenshot from 2021-12-17 12-45-49](https://user-images.githubusercontent.com/90089220/146548319-d5b7de06-cf25-42e9-9df9-577e3d6f1cd9.png)
@@ -43,10 +45,18 @@ Access: everyone
 
 Access: users
 
+![Screenshot from 2021-12-17 12-47-03](https://user-images.githubusercontent.com/90089220/146549135-8888091c-a08c-4b37-9be1-92085e53ae81.png)
+![Screenshot from 2021-12-17 12-47-13](https://user-images.githubusercontent.com/90089220/146549137-8bcf3075-842b-4d39-ae31-bfc1f2406605.png)
+
+
+Access: admins
+
 ![Screenshot from 2021-12-17 12-47-23](https://user-images.githubusercontent.com/90089220/146548654-3f687cab-5f9b-4558-bd5c-7fd294716172.png)
 ![Screenshot from 2021-12-17 12-47-52](https://user-images.githubusercontent.com/90089220/146548662-9a9c90ce-4207-4013-ac60-ad462b8d5b69.png)
 ![Screenshot from 2021-12-17 12-47-57](https://user-images.githubusercontent.com/90089220/146548665-bfa1f178-330c-44c0-acb2-3abc7be39b10.png)
 ![Screenshot from 2021-12-17 12-48-02](https://user-images.githubusercontent.com/90089220/146548667-5893cd42-f074-4f5f-8b50-5f4a8e6f0a84.png)
 
+Contact
+Please add suggestions or contact me if you like my project.
 
 
