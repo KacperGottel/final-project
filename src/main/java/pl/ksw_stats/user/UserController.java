@@ -1,6 +1,9 @@
 package pl.ksw_stats.user;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -15,12 +18,10 @@ import pl.ksw_stats.role.RoleRepository;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
 import java.util.Iterator;
 import java.util.Set;
 
@@ -39,12 +40,12 @@ public class UserController {
         this.userService = userService;
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
-
         this.commentRepository = commentRepository;
         this.fighterRepository = fighterRepository;
     }
 
     public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/webapp/resources/img/uploads";
+
 
     @GetMapping("/register")
     public String registerForm(Model model) {
@@ -123,9 +124,10 @@ public class UserController {
     }
 
     @RequestMapping("/user/{userId}/favouritefighters/list")
-    public String addFavouriteFighterfromList(@PathVariable long userId, Model model) {
+    public String addFavouriteFighterfromList(@PathVariable long userId, Model model, Pageable pageable) {
         model.addAttribute("user", userRepository.getById(userId));
-        model.addAttribute("fighters", fighterRepository.findAll());
+        Page<Fighter> page = fighterRepository.findAll(pageable);
+        model.addAttribute("page", page);
         return "user/allfighters";
     }
 
@@ -177,5 +179,9 @@ public class UserController {
         return "redirect:/user/panel";
     }
 
+    @ModelAttribute("")
+    public void addAttributes(@AuthenticationPrincipal CurrentUser customUser, Model model) {
+        model.addAttribute("currentuser", customUser);
+    }
 
 }

@@ -36,7 +36,7 @@
 <!-- Page Wrapper -->
 <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark  accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center"
@@ -50,32 +50,32 @@
         <%--        <!-- Nav Item - Dashboard -->    PANEL BOCZNY--%>
         <li class="nav-item active">
             <a class="nav-link" href="/about">
-                <i class="fas fa-fw fa-chevron-circle-right"></i>
+                <i class="fas fa-fw fa-home"></i>
                 <span>KSW</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="/event/list">
-                <i class="fas fa-fw fa-chevron-circle-right"></i>
+                <i class="fas fa-fw fa-people-carry"></i>
                 <span>Events</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="/fighter/list">
-                <i class="fas fa-fw fa-chevron-circle-right"></i>
+                <i class="fas fa-fw fa-th-list"></i>
                 <span>Fighters</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="https://kswshop.com/pl/">
-                <i class="fas fa-fw fa-chevron-circle-right"></i>
+            <a class="nav-link" href="https://kswshop.com/pl/" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-fw fa-shopping-cart"></i>
                 <span>KSW Shop</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="/user/panel">
-                <i class="fas fa-fw fa-chevron-circle-right"></i>
+                <i class="fas fa-fw fa-solar-panel"></i>
                 <span>My Profile</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/admin/panel">
-                <i class="fas fa-fw fa-chevron-circle-right"></i>
+            <a class="nav-link text-gray-400" href="/admin/panel">
+                <i class="fas fa-fw fa-calculator text-gray-400"></i>
                 <span>Administration</span></a>
         </li>
 
@@ -140,7 +140,8 @@
                                 </sec:authorize>
                             </span>
                             <img class="img-profile rounded-circle"
-                                 src="${pageContext.request.contextPath}/resources/img/userlogo.png" alt="">
+                                 src="${currentuser.getUser().img}" alt="">
+
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -152,7 +153,7 @@
                                 Sign in
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/register">
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/register">
                                 <i class="fas fa-registered fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Register
                             </a>
