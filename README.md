@@ -1,22 +1,19 @@
 
-**ksw-stats**<br>
-
-
+<h1>ksw-stats</h1>
 My graduation project for Java: Web Developer course by CodersLab Online.
 Application with great potential to develop. It's about KSW (European/Poland greatest mma organisation). The project was born out of desire to have a webapp that collects events, fightcards, fighters with their personals. Whats more, user have an opportunity to menage his account, favourite fighters list, own comments and its likes. 
 
 Application connect to Polsat Sport rss about combat sports and show news to everyone. Also everyone can read about events, fights, contact etc. or use free api endpoints that appears on webside. 
 
 
-
-**Installation**<br>
+<h3>Installation</h3>
 ksw-stats is written with Spring Boot. To run:
 
 compile it with maven and execute jar file
 add your username and password for database in application.properties
 
 
-**Technologies**<br>
+<h3>Technologies</h3>
 Java EE<br>
 Spring Boot<br>
 Polsat Sport rss<br>
@@ -25,12 +22,11 @@ JSP views<br>
 Hibernate<br>
 MySql<br>
 
-**Usage**<br>
-Register and Sign in. Get a view of rss news, events, fights, fighters and comments. Get to user panel, change your personals and picture. Add fighters to favourities. If your role is admin, you can block/unblock user, change their roles, add and upload events, fights, fighters and categories.
+<h3>Usage</h3>
+Register and Sign in. Get a view of rss news, events, fights, fighters and comments. Get to user panel, change your personals and picture. Add fighters to favourities. If your role is admin, you can block/unblock users, change their roles, add and upload events, fights, fighters and categories.
 
 
-
-**Views:**<br>
+<h3>Views</h3>
 Access: everyone
 
 ![Screenshot from 2021-12-17 12-45-49](https://user-images.githubusercontent.com/90089220/146548319-d5b7de06-cf25-42e9-9df9-577e3d6f1cd9.png)
@@ -56,7 +52,7 @@ Access: admins
 ![Screenshot from 2021-12-17 12-47-57](https://user-images.githubusercontent.com/90089220/146548665-bfa1f178-330c-44c0-acb2-3abc7be39b10.png)
 ![Screenshot from 2021-12-17 12-48-02](https://user-images.githubusercontent.com/90089220/146548667-5893cd42-f074-4f5f-8b50-5f4a8e6f0a84.png)
 
-Contact
-Please add suggestions or contact me if you like my project.
+
+<small>Please add suggestions or contact me if you like my project</small>
 
 
