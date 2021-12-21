@@ -39,6 +39,43 @@ Access: everyone
 ![Screenshot from 2021-12-17 12-48-17](https://user-images.githubusercontent.com/90089220/146548568-31671e4c-0a4b-4d7b-9b1f-fe0c34abd7f5.png)
 ![Screenshot from 2021-12-17 12-48-22](https://user-images.githubusercontent.com/90089220/146548571-5491ee06-e9f5-4b98-8ebc-416f186b53c6.png)
 
+<details>  
+<summary>Api endpoints</summary>  
+<p>EVENT<br>
+Method			URL			        Action(JSON)<br><br>
+GET        /api/event			      Find All<br>
+GET        /api/event/{id}			Find by id<br>
+POST       /api/event			      Create<br>
+PUT        /api/event/{id}			Update with id<br>
+DELETE     /api/event/{id}			Delete by id</p><br>
+<p>FIGHTER<br>
+Method			URL			        Action(JSON)<br><br>
+GET        /api/fighter			      Find All<br>
+GET        /api/fighter/{id}			Find by id<br>
+POST       /api/fighter			      Create<br>
+PUT        /api/fighter/{id}			Update with id<br>
+DELETE     /api/fighter/{id}			Delete by id</p><br>
+<p>FIGHT<br>
+Method			URL			        Action(JSON)<br><br>
+GET        /api/fight			      Find All<br>
+GET        /api/fight/{id}			Find by id<br>
+POST       /api/fight			      Create<br>
+PUT        /api/fight/{id}			Update with id<br>
+DELETE     /api/fight/{id}			Delete by id</p><br>
+<p>FIGHTER<br>
+Method			URL			        Action(JSON)<br><br>
+GET        /api/fighter			      Find All<br>
+GET        /api/fighter/{id}			Find by id<br>
+POST       /api/fighter			      Create<br>
+PUT        /api/fighter/{id}			Update with id<br>
+DELETE     /api/fighter/{id}			Delete by id</p><br>
+<p>CATEGORY<br>
+Method			URL			        Action(JSON)<br><br>
+GET        /api/category			      Find All
+</p><br>
+</details> 
+
+
 Access: users
 
 ![Screenshot from 2021-12-17 12-47-03](https://user-images.githubusercontent.com/90089220/146549135-8888091c-a08c-4b37-9be1-92085e53ae81.png)
