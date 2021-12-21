@@ -14,7 +14,7 @@ add your username and password for database in application.properties
 
 
 <h3>Technologies</h3>
-Java EE<br>
+Java<br>
 Spring Boot<br>
 Polsat Sport rss<br>
 Spring DataJpa, SpringSecurity<br>
