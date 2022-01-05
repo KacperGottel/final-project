@@ -1,7 +1,7 @@
 
 <h1>ksw-stats</h1>
 My graduation project for Java: Web Developer course by CodersLab Online.
-Application with great potential to develop. It's about KSW (European/Poland greatest mma organisation). The project was born out of desire to have a webapp that collects events, fightcards, fighters with their personals. Whats more, user have an opportunity to menage his account, favourite fighters list, own comments and its likes. 
+Application with great potential to develop. It's about KSW (European/Poland greatest mma organisation). The project was born out of desire to have a webapp that collects events, fightcards, fighters with their personals. Whats more, user have an opportunity to menage his account, favorite fighters list, own comments and its likes. 
 
 Application connect to Polsat Sport rss about combat sports and show news to everyone. Also everyone can read about events, fights, contact etc. or use free api endpoints that appears on webside. 
 
