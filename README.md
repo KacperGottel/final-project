@@ -1,13 +1,13 @@
 
 <h1>ksw-stats</h1>
-My graduation project for Java: Web Developer course by CodersLab Online.
+My graduation project for Java Developer course by Coders Lab Online.
 Application with great potential to develop. It's about KSW (European/Poland greatest mma organisation). The project was born out of desire to have a webapp that collects events, fightcards, fighters with their personals. Whats more, user have an opportunity to menage his account, favorite fighters list, own comments and its likes. 
 
 Application connect to Polsat Sport rss about combat sports and show news to everyone. Also everyone can read about events, fights, contact etc. or use free api endpoints that appears on website. 
 
 
 <h3>Installation</h3>
-ksw-stats is written with Spring Boot. To run:
+ksw-stats is written with Spring Boot with bootstrap template. To run:
 
 compile it with maven and execute jar file
 add your username and password for database in application.properties
@@ -18,9 +18,9 @@ Java<br>
 Spring Boot<br>
 Polsat Sport rss<br>
 Spring DataJpa, SpringSecurity<br>
-JSP views<br>
 Hibernate<br>
 MySql<br>
+views: JSP, HTML, JavaScript, CSS
 
 <h3>Usage</h3>
 Register and Sign in. Get a view of rss news, events, fights, fighters and comments. Get to user panel, change your personals and picture. Add fighters to favourities. If your role is admin, you can block/unblock users, change their roles, add and upload events, fights, fighters and categories.
